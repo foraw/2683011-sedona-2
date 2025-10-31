@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Сергей](https://up.htmlacademy.ru/htmlcss-individual/2/user/2683011).
-* Наставник: `Неизвестно`.
+* Наставник: [Анна Лисененкова](https://htmlacademy.ru/profile/ankhena).
 
 ---
 
