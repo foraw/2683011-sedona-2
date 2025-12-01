@@ -1,6 +1,6 @@
  @font-face {
    font-family: "PT Sans";
-   font-weight: 400;  /*normal*/
+   font-weight: 400;
    font-style: normal;
    font-display: swap;
    src: url("../fonts/ptsans-400.woff2") format("woff2");
@@ -8,7 +8,7 @@
 
  @font-face {
    font-family: "PT Sans";
-   font-weight: 700;  /*bold*/
+   font-weight: 700;
    font-style: normal;
    font-display: swap;
    src: url("../fonts/ptsans-700.woff2") format("woff2");
@@ -16,128 +16,58 @@
 
  body {
   font-family: "PT Sans", sans-serif;
-  font-size: 18px;
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
   font-style: normal;
-  line-height: 21px;
-  color: #000000;
-  background: #F2F2F2;
+  font-weight: 400;
+  color: #333333;
+  background-color: #f2f2f2;
 }
 
 .header {
   color: #000000;
-  background: #ffffff
-}
-
-.item {
-  display: inline-block;
-}
-
-.filter-group {
-  display: inline-block;
+  background-color: #ffffff
 }
 
 .nav-link {
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
-  color: #000000;
-  background: #ffffff;
-  text-align: center;
   text-transform: capitalize;
+}
+
+.link {
+  color: inherit;
   text-decoration: none;
 }
 
-.main {
-  color: #000000;
-  background: #ffffff;
-
-}
-
-.welcome {
-  background-image: url(../images/index-background.jpg);
-  background-repeat: no-repeat;
-}
-
-.title {
-  font-size: 30px;
-  font-weight: 700;
-  line-height: 36px;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.title-text {
-  font-size: 22px;
-  font-weight: 400;
-  line-height: 26px;
-  text-align: center;
-}
-
-.advantages-list {
-  text-align: center;
-}
-
-.subtitle {
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 28px;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.subtitle-description {
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 21px;
-  text-align: center;
-}
-
-.advantages-item {
-  color: #000000;
-  background: #83B3D31F
-}
-
-.advantages-item-different {
-  background: #83B3D333
-}
-
-.advantages-item-special {
+.favorites-number {
   color: #ffffff;
-  background: #82B3D3;
-}
-
-.advantages-img {
-  display: block;
-}
-
-.advices-item-special {
- background: #83B3D31F;
-}
-
-.subscribe-special {
-  background-image: url(../images/pictures/subscribe-background.jpg);
-  /*background: no-repeat;*/
+  background-color: #7db54f;
+  font-size: 10px;
+  line-height: 10px;
 }
 
 .button {
-  font-family: "PT Sans", sans-serif;
-  font-style: normal;
   color: #ffffff;
-  font-size: 20px;
+  background-color: #82B3D3;
+  font-size: 16px;
+  line-height: 20px;
   font-weight: 700;
-  line-height: 36px;
-  text-align: center;
   text-transform: uppercase;
   border-style: none;
+  text-decoration: none;
+  font-family: inherit;
 }
 
 .button-search, .nav-user-button, .button-more-info {
-  background: #756157;
-  text-decoration: none;
+  background-color: #756157;
 }
 
-.button-subscribe, .button-submit, .button-favorite {
-  background: #82B3D3;
+.button-search, .button-subscribe, .button-pagination {
+  font-size: 20px;
+  line-height: 36px;
 }
 
 .button-reset {
@@ -145,60 +75,141 @@
 }
 
 .button-favorite-active {
-  background: #7DB54F;
+  background-color: #7db54f;
+}
+
+.button-rating, .button-pagination-current {
+  color: #000000;
+  background-color: #F2F2F2;
 }
 
 .button-rating {
-  color: #000000;
-  background: #F2F2F2;
-  font-size: 16px;
   font-weight: 400;
-  line-height: 20px;
   display: inline-block;
-  /*width: 140px;*/
-  /*height: 37px;*/
 }
 
-.button-pagination {
-  background: #82B3D3;
-  color: #ffffff;
-  font-size: 20px;
-  line-height: 36px;
-  text-align: center;
-  text-transform: uppercase;
-  font-weight: 700;
-  text-decoration: none;
+.main {
+  background-color: #ffffff;
 }
 
-.button-pagination-current {
-  background: #F2F2F2;
+.welcome {
+  background-image: url("../images/pictures/background-rocks-1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #95d0f7;
+  /*background-position: left top;*/
+}
+
+.title {
   color: #000000;
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  color: #000000;
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.subtitle-special {
+  color: #ffffff;
+}
+
+.list {
+  list-style-type: none;
+}
+
+.subtitle-text {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.advantages-item, .advices-item-special {
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.advantages-item-special {
+  color: #ffffff;
+  background-color: #83b3d3;
+}
+
+.advantages-item-different {
+  background-color:rgba(131, 179, 211, 0.2);
+}
+
+.title-subscribe {
+  color: #ffffff;
+}
+
+.subscribe-special {
+  background-image: url("../images/pictures/background-rocks-3.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #95d0f7;
+  color: #ffffff;
+}
+
+.input {
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.footer {
+  background-color: #ffffff;
 }
 
 .contacts-phone {
   color: #000000;
   font-style: normal;
   font-size: 40px;
-  font-weight: 400;
   line-height: 40px;
-  text-align: center;
   text-transform: uppercase;
   text-decoration: none;
 }
 
 .catalog-top {
-  color: #ffffff;
-  background: #F2F2F2;
-  background-image: url(../images/catalog-background.jpg);
+  background-image: url("../images/pictures/background-rocks-2.jpg");
+  background-size: cover;
   background-repeat: no-repeat;
-  display: block;
+  background-color: #95d0f7;
+  color: #ffffff;
+  text-align: left;
 }
 
-.catalog-title-link {
-  color: #000000;
-  text-decoration: none;
-  font-size: 24px;
-  line-height: 28px;
+.breadcrumbs-link {
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.filter-title {
+  font-size: 20px;
   font-weight: 700;
+  line-height: 24px;
+}
+
+.filter-item {
+  font-size: 18px;
+  line-height: 23px;
+}
+
+.catalog {
   text-align: left;
+}
+
+.select-sorting {
+  font-size: 18px;
+  line-height: 21px;
+  font-family: inherit;
+  background-color: #ffffff;
+  color: #333333;
+}
+
+.catalog-title {
+  text-transform: capitalize;
 }
