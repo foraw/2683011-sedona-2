@@ -107,8 +107,22 @@
 }
 
 .user-menu-search {
-  outline: 5px solid rgba(252, 0, 0, 0.5);
-  outline-offset: -5px;
+  outline: 1px solid rgba(252, 0, 0, 0.5);
+  outline-offset: -1px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+}
+
+.user-menu-search::before {
+  content: "";
+  display: block;
+  background: #000000;
+  width: 18px;
+  height: 18px;
+  mask: url("../images/icons/search.svg") no-repeat center;
 }
 
 .favorites-number {
@@ -289,10 +303,40 @@
 }
 
 .advices-img {
-  outline: 5px solid rgba(0, 118, 252, 0.5);
-  outline-offset: -5px;
+  outline: 1px solid rgba(0, 118, 252, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 75px;
   height: 72px;
+}
+
+.advices-img-food {
+  justify-content: end;
+}
+
+.advices-img::before {
+  content: "";
+  display: block;
+  background: #83b3d3;
+}
+
+.advices-img-house::before {
+  width: 75px;
+  height: 72px;
+  mask: url("../images/house.svg") no-repeat center;
+}
+
+.advices-img-food::before {
+  width: 74px;
+  height: 70px;
+  mask: url("../images/food.svg") no-repeat;
+}
+
+.advices-img-gift::before {
+  width: 64px;
+  height: 76px;
+  mask: url("../images/gift.svg") no-repeat center;
 }
 
 .button-search {
@@ -350,17 +394,50 @@
   display: flex;
 }
 
-.socials-item {
-  outline: 2px solid rgba(252, 0, 0, 0.5);
-  outline-offset: -2px;
-}
-
 .socials-link {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 47px;
   height: 40px;
   /* color: inherit; */
-  text-decoration: none;
+  /* text-decoration: none; */
+}
+
+.socials-link::before {
+  content: "";
+  display: block;
+  background: #83b3d3;
+}
+
+.socials-link-vk::before {
+  width: 24px;
+  height: 14px;
+  mask: url("../images/socials/vk.svg") no-repeat center;
+}
+
+.socials-link-telegram::before {
+  width: 18px;
+  height: 16px;
+  mask: url("../images/socials/telegram.svg") no-repeat center;
+}
+
+.socials-link-youtube::before {
+  width: 22px;
+  height: 17px;
+  mask: url("../images/socials/youtube.svg") no-repeat center;
+}
+
+.socials-link:hover::before {
+  background: #68a2ca;
+}
+
+.socials-link:focus::before {
+  background: #68a2ca;
+}
+
+.socials-link:active::before {
+  background: rgba(104, 162, 202, 0.3);
 }
 
 .contacts-phone {
@@ -373,13 +450,48 @@
   display: inline-block;
 }
 
+.contacts-phone:hover {
+  color: #756157;
+}
+
+.contacts-phone:focus {
+  color: #756157;
+}
+
+.contacts-phone:active {
+  color: rgba(117, 97, 87, 0.3);
+}
+
 .developer-link {
-  outline: 5px solid rgba(25, 0, 252, 0.5);
-  outline-offset: -5px;
-  color: inherit;
-  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 115px;
   height: 33px;
+  /* color: inherit; */
+  /* text-decoration: none; */
+  
+}
+
+.developer-link::before {
+  content: "";
+  display: block;
+  width: 115px;
+  height: 33px;
+  background: #000000;
+  mask: url("../images/developer-logo.svg") no-repeat center;
+}
+
+.developer-link:hover::before {
+  background: #756157;
+}
+
+.developer-link:focus::before {
+  background: #756157;
+}
+
+.developer-link:active::before {
+  background: rgba(117, 97, 87, 0.3);
 }
 
 .catalog-top {
@@ -546,7 +658,7 @@
   margin-bottom: 60px;
 }
 
-.catalog-list {                                   /*                   */
+.catalog-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
@@ -554,7 +666,7 @@
   margin-bottom: 80px;
 }
 
-.catalog-item {                                   /*                   */
+.catalog-item {
   outline: 1px solid #e6e6e6;
   border-radius: 4px;
   display: grid;
@@ -565,7 +677,7 @@
   box-sizing: border-box;
 }
 
-.catalog-img-link {                                /*                   */
+.catalog-img-link {
   text-decoration: none;
   grid-column: 1 / -1;
 }
@@ -574,7 +686,7 @@
   display: block;
 }
 
-.catalog-title-link {                             /*                   */
+.catalog-title-link {
   text-decoration: none;
   grid-column: 1 / -1;
 }
@@ -584,8 +696,7 @@
 }
 
 .subtitle-text-price {
-  /* text-align: right; */       /** задаёт Ширину по всей ячейке*/
-  justify-self: end;             /** задаёт Ширину по Элементу */
+  justify-self: end;
 }
 
 .button-info {
@@ -650,18 +761,3 @@
 .button-pagination-two-digits {
   padding: 12px 18px;
 }
-
-
-/* .subtitle-advantages::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -2px;
-  background-color: black;
-  height: 2px;
-}
-
-.subtitle-advantages {
-  position: relative;
-} */
