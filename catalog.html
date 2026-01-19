@@ -27,12 +27,12 @@
           </ul>
           <ul class="list nav-list user-menu-list">
             <li class="user-menu-item">
-              <a class="nav-link user-menu-search" href="#">
+              <a class="nav-link user-menu-link user-menu-search" href="#">
                 <span class="visually-hidden">Поиск по сайту</span>
               </a>
             </li>
             <li class="user-menu-item">
-              <a class="nav-link user-menu-favorites" href="#">
+              <a class="nav-link user-menu-link user-menu-favorites" href="#">
                 <span class="visually-hidden">Гостиниц в избранном</span>
                 <span class="favorites-number">12</span>
               </a>
@@ -53,7 +53,7 @@
                 <span class="visually-hidden">Главная</span>
               </a>
             <li class="breadcrumbs-item">
-              <a class="breadcrumbs-link" aria-current="page">Гостиницы</a>
+              <a class="breadcrumbs-link breadcrumbs-link-catalog" aria-current="page">Гостиницы</a>
             </li>
           </ul>
           <section class="filter" data-test="filter">
@@ -64,17 +64,23 @@
                 <ul class="list filter-list">
                   <li class="filter-item">
                     <label class="filter-subject" for="pool">
-                      <input class="input-box" type="checkbox" id="pool" name="pool" checked>Бассейн
+                      <input class="visually-hidden input-box" type="checkbox" id="pool" name="pool" checked>
+                      <span class="input-check input-check-box"></span>
+                      <span class="check-box-title">Бассейн</span>
                     </label>
                   </li>
                   <li class="filter-item">
                     <label class="filter-subject" for="parking">
-                      <input class="input-box" type="checkbox" id="parking" name="parking" checked>Парковка
+                      <input class="visually-hidden input-box" type="checkbox" id="parking" name="parking" checked>
+                      <span class="input-check input-check-box"></span>
+                      <span class="check-box-title">Парковка</span>
                     </label>
                   </li>
                   <li class="filter-item">
                     <label class="filter-subject" for="wi-fi">
-                      <input class="input-box" type="checkbox" id="wi-fi" name="wi-fi">Wi-Fi
+                      <input class="visually-hidden input-box" type="checkbox" id="wi-fi" name="wi-fi">
+                      <span class="input-check input-check-box"></span>
+                      <span class="check-box-title">Wi-Fi</span>
                     </label>
                   </li>
                 </ul>
@@ -84,31 +90,38 @@
                 <ul class="list filter-list">
                   <li class="filter-item">
                     <label class="filter-subject" for="hotel">
-                      <input class="input-radio" type="radio" id="hotel" name="accommodation-type" value="hotel"
-                        checked>Гостиница
+                      <input class="visually-hidden input-radio" type="radio" id="hotel" name="accommodation-type"
+                        value="hotel" checked>
+                      <span class="input-check input-check-radio"></span>
+                      <span class="check-box-title">Гостиница</span>
                     </label>
                   </li>
                   <li class="filter-item">
                     <label class="filter-subject" for="motel">
-                      <input class="input-radio" type="radio" id="motel" name="accommodation-type" value="motel">Мотель
+                      <input class="visually-hidden input-radio" type="radio" id="motel" name="accommodation-type"
+                        value="motel">
+                      <span class="input-check input-check-radio"></span>
+                      <span class="check-box-title">Мотель</span>
                     </label>
                   </li>
                   <li class="filter-item">
                     <label class="filter-subject" for="apartments">
-                      <input class="input-radio" type="radio" id="apartments" name="accommodation-type"
-                        value="apartments">Апартаменты
+                      <input class="visually-hidden input-radio" type="radio" id="apartments" name="accommodation-type"
+                        value="apartments">
+                      <span class="input-check input-check-radio"></span>
+                      <span class="check-box-title">Апартаменты</span>
                     </label>
                   </li>
                 </ul>
               </fieldset>
               <fieldset class="filter-group filter-group-price">
                 <legend class="filter-title">Стоимость, ₽:</legend>
-                <label class="filter-subject" for="price-min">
+                <label class="filter-control-price" for="price-min">
                   <span class="visually-hidden">От</span>
                   <input class="input filter-input" type="text" id="price-min" name="price-min"
                     placeholder="Введите минимальную" value="0">
                 </label>
-                <label class="filter-subject" for="price-max">
+                <label class="filter-control-price" for="price-max">
                   <span class="visually-hidden">До</span>
                   <input class="input filter-input filter-input-right" type="text" id="price-max" name="price-max"
                     placeholder="Введите максимальную" value="9000">
@@ -130,25 +143,27 @@
         <section class="catalog" data-test="catalog">
           <div class="sorting-wrapper">
             <h2 class="title"> Найдено гостиниц: 38</h2>
-            <select class="select-sorting" aria-label="Сортировка">
-              <option value="cheap" selected>Сначала дешевые</option>
-              <option value="expensive">Сначала дорогие</option>
-              <option value="popular">Сначала популярные</option>
-              <option value="rating">По рейтингу</option>
-            </select>
+            <div class="select-wrap">
+              <select class="select-sorting" aria-label="Сортировка">
+                <option value="cheap" selected>Сначала дешевые</option>
+                <option value="expensive">Сначала дорогие</option>
+                <option value="popular">Сначала популярные</option>
+                <option value="rating">По рейтингу</option>
+              </select>
+            </div>
             <ul class="list view-mode-list">
               <li class="view-mode-item">
-                <a class="view-mode-link view-mode-selected" href="catalog.html?view=list">
+                <a class="view-mode-link view-mode-tile view-mode-selected" href="catalog.html?view=list">
                   <span class="visually-hidden">Показать списком</span>
                 </a>
               </li>
               <li class="view-mode-item">
-                <a class="view-mode-link" href="catalog.html?view=card">
+                <a class="view-mode-link view-mode-card" href="catalog.html?view=card">
                   <span class="visually-hidden">Показать по одной карточке</span>
                 </a>
               </li>
               <li class="view-mode-item">
-                <a class="view-mode-link" href="catalog.html?view=tile">
+                <a class="view-mode-link view-mode-list" href="catalog.html?view=tile">
                   <span class="visually-hidden">Показать группу карточек</span>
                 </a>
               </li>
