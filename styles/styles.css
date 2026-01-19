@@ -950,7 +950,8 @@ img {
 .view-mode-link::before {
   content: "";
   display: block;
-  background: #000000 no-repeat center;
+  background-color: #000000;
+  background: no-repeat center;
 }
 
 .view-mode-tile::before {
