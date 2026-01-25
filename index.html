@@ -121,7 +121,8 @@
             <p class="title-text">Укажите предполагаемые даты поездки, <br> и&nbsp;мы&nbsp;покажем вам лучшие
               предложения гостиниц в&nbsp;Седоне</p>
           </div>
-          <a class="button button-search" href="#">Поиск гостиницы в Седоне</a>
+          <button class="button button-search" type="button" onclick="window.modalDialog.showModal();">Поиск гостиницы
+            в Седоне</button>
         </section>
         <section class="subscribe subscribe-special" data-test="subscribe">
           <div class="title-wrapper subscribe-wrapper">
@@ -162,16 +163,62 @@
           <span class="visually-hidden">Логотип разработчика сайта HTML Academy</span>
         </a>
       </footer>
-      <div class="modal-container modal-container-close">
-        <div class="modal modal-search">
-          <button class="modal-close-button">
-            <span class="visually-hidden">Закрыть</span>
-          </button>
-          <section class="modal-content">
-            <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+      <dialog class="modal-window" id="modalDialog">
+        <div class="modal-container">
+          <div class="modal modal-search">
+            <form method="dialog">
+              <button class="modal-close-button" type="submit">
+                <span class="visually-hidden">Закрыть</span>
+              </button>
+            </form>
+            <section class="modal-content">
+              <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+              <form class="modal-form" action="https://echo.htmlacademy.ru/" method="post">
+                <p class="form-check-date">
+                  <label class="modal-label-title" for="check-in-date">Дата заезда:</label>
+                  <input class="input input-check-date" type="text" id="check-in-date" name="check-in-date"
+                    placeholder="Укажите дату" autofocus required>
+                  <span class="icon-calendar" tabindex="0"></span>
+                </p>
+                <span class="form-info form-info-warning">Мы не можем отправить вас в прошлое.</span>
+                <p class="form-check-date">
+                  <label class="modal-label-title" for="check-out-date">Дата выезда:</label>
+                  <input class="input input-check-date" type="text" id="check-out-date" name="check-out-date"
+                    placeholder="Укажите дату" required>
+                  <span class="icon-calendar" tabindex="0"></span>
+                </p>
+                <span class="form-info">На эти даты есть свободные номера. Пока есть.</span>
+                <div class="check-in-all-persons-wrapper">
+                  <div class="check-in-persons-wrapper check-in-adults-wrapper">
+                    <label class="modal-label-title" for="adults">Взрослые:</label>
+                    <div class="buttons-wrap">
+                      <button class="button button-plus-minus button-minus" type="button"></button>
+                      <input class="input persons" type="text" id="adults" name="adults" value="2" placeholder="0"
+                        maxlength="2" required>
+                      <button class="button button-plus-minus button-plus" type="button"></button>
+                    </div>
+                  </div>
+                  <div class="check-in-persons-wrapper check-in-children-wrapper">
+                    <label class="modal-label-title modal-label-title-children" for="children">Дети:</label>
+                    <span class="tooltip-icon" tabindex="0"></span>
+                    <span class="tooltip-text">Укажите количество детей, которые будут с&nbsp;вами, возраст
+                      которых
+                      от&nbsp;6&nbsp;до&nbsp;18&nbsp;лет. Дети до&nbsp;6&nbsp;лет размещаются бесплатно.
+                    </span>
+                    <div class="buttons-wrap">
+                      <button class="button button-plus-minus button-minus" type="button"></button>
+                      <input class="input persons" type="text" id="children" name="children" value="2" placeholder="0"
+                        maxlength="2">
+                      <button class="button button-plus-minus button-plus" type="button"></button>
+                    </div>
+                  </div>
+                </div>
+                <button class=" button button-request" type="submit">Найти</button>
+              </form>
             </section>
+          </div>
         </div>
-      </div>
+      </dialog>
     </div>
   </body>
 
