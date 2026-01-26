@@ -1098,11 +1098,15 @@ html:has(.modal-window[open]:modal) {
   width: 20px;
   height: 24px;
   top: 12px;
-  right: 20px;
+  right: 17px;
   font-size: 18px;
   line-height: 24px;
   color: #000000;
   opacity: 0.3;
+}
+
+.input-text-right {
+  right: 20px;
 }
 
 .range-scale {
@@ -1205,9 +1209,11 @@ html:has(.modal-window[open]:modal) {
   line-height: 21px;
   color: #333333;
   width: 100%;
-  padding: 10px 16px;
+  padding: 14px 20px;
   padding-right: 99px;
-  border: 2px solid #e5e5e5;
+  outline: 2px solid #e5e5e5;
+  outline-offset: -2px;
+  border: none;
   border-radius: 4px;
   background-color: #ffffff;
   background-image: url("../images/icons/arrow-down.svg");
@@ -1218,11 +1224,11 @@ html:has(.modal-window[open]:modal) {
 
 .select-sorting:hover,
 .select-sorting:focus {
-  border-color: #68a2ca;
+  outline-color: #68a2ca;
 }
 
 .select-sorting:disabled {
-  border-color: rgba(0, 0, 0, 0.3);
+  outline-color: rgba(0, 0, 0, 0.3);
 }
 
 .view-mode-list {
